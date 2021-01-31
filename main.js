@@ -49,7 +49,30 @@
 
 (function() {
 
+    var person = {
+        name: "Jack",
+        age: 32,
+        married: true
+    }
 
+    function personChildren(man) {
+
+        if(!man.children) {
+            man.children = [
+                {name: 'Mike',
+                age: 5,
+                gender: 'male'
+                },
+                {name: 'Ann',
+                age: 3,
+                gender: 'female'
+                }
+            ]
+        }
+        // console.log(man);
+    }
+
+    personChildren(person);
     
 })();
 
@@ -82,7 +105,41 @@
 
 (function() {
 
+    var students = [ 
+        {
+            name: 'Mike',
+            age: 28,
+            passed: false
+        },
+        {
+            name: 'Anna',
+            age: 23,
+            passed: true
+        },
+        {
+            name: 'Jack',
+            age: 32,
+            passed: true
+        }
+    ];
 
+    function printResult(results, name) {
+
+        for(var i = 0; i < results.length; i++) {
+            //kako fja radi bez deklarisanja varijable student?
+            // var student;
+            if (results[i].name === name) {
+                student = results[i];
+            }
+        }
+
+        student.passed === true ? console.log(student.name + " passed the exam.") : console.log(student.name + " did not passed the exam.");
+        
+    }
+
+    printResult(students, 'Anna');
+    printResult(students, 'Mike');
+    printResult(students, 'Jack');
     
 })();
 
@@ -115,8 +172,43 @@
 
 (function() {
 
+    var students = [ 
+        {
+            name: 'Mike',
+            age: 28,
+            passed: false
+        },
+        {
+            name: 'Anna',
+            age: 23,
+            passed: true
+        },
+        {
+            name: 'Jack',
+            age: 32,
+            passed: true
+        },
+    ];
 
-    
+    function repackToArray(arr) {
+
+        var names = [];
+        var ages = [];
+        var passed = [];
+
+        for(var i = 0; i < arr.length; i++) {
+
+            names[names.length] = arr[i].name;
+            ages[ages.length] = arr[i].age;
+            passed[passed.length] = arr[i].passed;
+        }
+
+        // console.log(names, ages, passed);
+
+    }
+
+    repackToArray(students);
+
 })();
 
 
@@ -135,6 +227,13 @@
 
 (function() {
 
+    var person = {
+        name: "Jack";
+        age: 32,
+        married: true
+    }
+
+    
 
     
 })();
