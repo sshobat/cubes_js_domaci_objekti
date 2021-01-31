@@ -228,14 +228,33 @@
 (function() {
 
     var person = {
-        name: "Jack";
+        name: "Jack",
         age: 32,
         married: true
     }
 
-    
+    var otherPerson = Object.create(person, {
 
-    
+        children: {
+            value: [ 
+                {
+                    name: 'Mike',
+                    age: 1
+                },
+                {
+                    name: 'Anna',
+                    age: 2
+                },
+                {
+                    name: 'Jack',
+                    age: 3
+                },
+            ]
+        }
+    });
+
+    console.log(otherPerson.age);
+
 })();
 
 // TASK 6:
@@ -254,6 +273,8 @@
 (function() {
 
 
+
+    
     
 })();
 
