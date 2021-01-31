@@ -13,7 +13,6 @@
 
 // Create a function which should change age to 34, and delete married property. In the end console.log object.
 
-
 (function() {
 
     var person = {
@@ -46,7 +45,6 @@
 
 // Create a function which should check if person has children property, if not add it. Its value should be array containing two objects with children data. Each object should contain child name, age and gender.
 
-
 (function() {
 
     var person = {
@@ -69,7 +67,7 @@
                 }
             ]
         }
-        // console.log(man);
+        console.log(man);
     }
 
     personChildren(person);
@@ -101,7 +99,6 @@
 // Create a function which should console.log if student passed exam, result should be something like:
 
 // "Jack passed exam" or "Mike didn't pass exam"
-
 
 (function() {
 
@@ -169,7 +166,6 @@
 
 // var names = ['Mike', 'Anna', 'Jack'];
 
-
 (function() {
 
     var students = [ 
@@ -203,7 +199,7 @@
             passed[passed.length] = arr[i].passed;
         }
 
-        // console.log(names, ages, passed);
+        console.log(names, ages, passed);
 
     }
 
@@ -223,7 +219,6 @@
 // }
 
 // Create the other object which should inherit data from existing object. Then console.log age by accessing the newly created object.
-
 
 (function() {
 
@@ -269,12 +264,18 @@
 
 // Create a method which, when called, should console.log name and age of existing object.
 
-
 (function() {
 
+    var person = {
+        name: "Mike",
+        age: 28,
+        married: true,
+        printFn: function() {
+            console.log("His name is " + this.name + ", and his age is " + this.age + ".");
+        }
+    }
 
-
-    
+    person.printFn();
     
 })();
 
@@ -288,8 +289,20 @@
 
 (function() {
 
+    var person = {
+        fillObject: function(name, age, married) {
+            this.name = name;
+            this.age = age;
+            this.married = married;
+        }
+    };
 
-    
+    person.fillObject('Jonas', 25, true);
+    console.log(person);
+
+    person.fillObject('Mike', 50, false);
+    console.log(person);
+
 })();
 
 
